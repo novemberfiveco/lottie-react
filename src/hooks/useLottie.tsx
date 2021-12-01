@@ -5,7 +5,8 @@ import React, {
   ReactElement,
   useState,
 } from "react";
-import lottie, {
+import lottie from 'lottie-web/build/player/lottie_light'
+import {
   AnimationConfigWithData,
   AnimationItem,
   AnimationDirection,
