@@ -1,7 +1,7 @@
 {
-  "name": "lottie-react",
-  "version": "2.1.0",
-  "description": "Lottie for React",
+  "name": "@novemberfiveco/lottie-react-light",
+  "version": "2.2.1",
+  "description": "Lottie (light) for React",
   "keywords": [
     "lottie",
     "react",
@@ -12,13 +12,13 @@
     "component",
     "hook"
   ],
-  "homepage": "https://github.com/Gamote/lottie-react",
+  "homepage": "https://github.com/novemberfiveco/lottie-react",
   "bugs": {
-    "url": "https://github.com/Gamote/lottie-react/issues"
+    "url": "https://github.com/novemberfiveco/lottie-react/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gamote/lottie-react.git"
+    "url": "git://github.com/novemberfiveco/lottie-react.git"
   },
   "license": "MIT",
   "author": "David Gamote",
@@ -79,6 +79,7 @@
     "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.2",
+    "postcss": "^8.4.4",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -98,5 +99,8 @@
     "prop-types": "^15.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "publishConfig":{
+    "registry":"https://npm.pkg.github.com"
   }
 }
