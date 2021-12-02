@@ -160,9 +160,8 @@ const useLottie = (
 
   /**
    * Load a new animation, and if it's the case, destroy the previous one
-   * @param {Object} forcedConfigs
    */
-  const loadAnimation = (forcedConfigs = {}) => {
+  const loadAnimation = (forcedConfigs: object = {}) => {
     // Return if the container ref is null
     if (!animationContainer.current) {
       return;
@@ -285,7 +284,7 @@ const useLottie = (
        * @param {Listener} listener
        * @return {Function} Function that deregister the listener
        */
-      (listener) => {
+      (listener: Listener): Function => {
         animationInstanceRef.current?.addEventListener(
           listener.name,
           listener.handler,

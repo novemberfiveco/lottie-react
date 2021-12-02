@@ -34,7 +34,7 @@ export type LottieRefCurrentProps = {
 
 export type LottieRef = MutableRefObject<LottieRefCurrentProps | null>;
 
-export type LottieOptions = AnimationConfigWithData & {
+export type LottieOptions = Omit<AnimationConfigWithData, 'container'> & {
   lottieRef?: LottieRef;
   onComplete?: AnimationEventHandler | null;
   onLoopComplete?: AnimationEventHandler | null;
@@ -52,7 +52,7 @@ export type PartialLottieOptions = Omit<LottieOptions, "animationData"> & {
   animationData?: LottieOptions["animationData"];
 };
 
-export type LottieComponentProps = Omit<LottieOptions, 'container'> &
+export type LottieComponentProps = LottieOptions &
   HTMLProps<HTMLDivElement> & {
     interactivity?: Omit<InteractivityProps, "lottieObj">;
     container?: Element;
