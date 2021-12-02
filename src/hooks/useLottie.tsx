@@ -5,7 +5,7 @@ import React, {
   ReactElement,
   useState,
 } from "react";
-import lottie from 'lottie-web/build/player/lottie_light'
+import lottieLight from 'lottie-web/build/player/lottie_light'
 import {
   AnimationConfigWithData,
   AnimationItem,
@@ -179,7 +179,7 @@ const useLottie = (
     };
 
     // Save the animation instance
-    animationInstanceRef.current = lottie.loadAnimation(config);
+    animationInstanceRef.current = lottieLight.loadAnimation(config);
 
     setAnimationLoaded(!!animationInstanceRef.current);
   };

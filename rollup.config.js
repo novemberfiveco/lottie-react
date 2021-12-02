@@ -86,7 +86,7 @@ const exports = {
       exports: "named",
       globals: {
         react: "React",
-        "lottie-web/build/player/lottie_light": "Lottie",
+        "lottie-web/build/player/lottie_light": "LottiePlayerLight",
       },
     },
     external: ["lottie-web/build/player/lottie_light"],
@@ -101,7 +101,7 @@ const exports = {
       name: "lottie-react-light",
       globals: {
         react: "React",
-        "lottie-web/build/player/lottie_light": "Lottie",
+        "lottie-web/build/player/lottie_light": "LottiePlayerLight",
       },
     },
     external: ["lottie-web/build/player/lottie_light"],
@@ -129,7 +129,7 @@ const exports = {
     plugins: [...reusablePluginList, terser()],
   },
   dts: {
-    input: dtsExtension(input),
+    input: './compiled/index.d.ts',
     output: {
       file: packageJSON.types,
       format: "es",
