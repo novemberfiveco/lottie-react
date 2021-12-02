@@ -63,7 +63,7 @@ const exports = {
       sourcemap: true,
       exports: "named",
     },
-    external: ["lottie-web"],
+    external: ["lottie-web/build/player/lottie_light"],
     plugins: reusablePluginList,
   },
   cjs_min: {
@@ -73,7 +73,7 @@ const exports = {
       format: "cjs",
       exports: "named",
     },
-    external: ["lottie-web"],
+    external: ["lottie-web/build/player/lottie_light"],
     plugins: [...reusablePluginList, terser()],
   },
   umd: {
@@ -82,15 +82,14 @@ const exports = {
       file: packageJSON.browser,
       format: "umd",
       sourcemap: true,
-      name: "lottie-react",
+      name: "lottie-react-light",
       exports: "named",
       globals: {
         react: "React",
-        "prop-types": "PropTypes",
-        "lottie-web": "Lottie",
+        "lottie-web/build/player/lottie_light": "Lottie",
       },
     },
-    external: ["lottie-web"],
+    external: ["lottie-web/build/player/lottie_light"],
     plugins: reusablePluginList,
   },
   umd_min: {
@@ -99,14 +98,13 @@ const exports = {
       file: minifyExtension(packageJSON.browser),
       format: "umd",
       exports: "named",
-      name: "lottie-react",
+      name: "lottie-react-light",
       globals: {
         react: "React",
-        "prop-types": "PropTypes",
-        "lottie-web": "Lottie",
+        "lottie-web/build/player/lottie_light": "Lottie",
       },
     },
-    external: ["lottie-web"],
+    external: ["lottie-web/build/player/lottie_light"],
     plugins: [...reusablePluginList, terser()],
   },
   es: {
@@ -117,7 +115,7 @@ const exports = {
       sourcemap: true,
       exports: "named",
     },
-    external: ["lottie-web"],
+    external: ["lottie-web/build/player/lottie_light"],
     plugins: reusablePluginList,
   },
   es_min: {
@@ -127,7 +125,7 @@ const exports = {
       format: "es",
       exports: "named",
     },
-    external: ["lottie-web"],
+    external: ["lottie-web/build/player/lottie_light"],
     plugins: [...reusablePluginList, terser()],
   },
   dts: {
