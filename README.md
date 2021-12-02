@@ -1,23 +1,21 @@
-# lottie-react
+# lottie-react-light
 
 [![npm version](https://img.shields.io/npm/v/lottie-react)](https://www.npmjs.com/package/lottie-react) [![npm downloads/month](https://img.shields.io/npm/dm/lottie-react)](https://www.npmjs.com/package/lottie-react) [![Build Status](https://travis-ci.org/Gamote/lottie-react.svg?branch=master)](https://travis-ci.org/Gamote/lottie-react) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/13a28cb016c941daa9084654bc2bac75)](https://www.codacy.com/manual/Gamote/lottie-react) [![Known Vulnerabilities](https://snyk.io/test/github/Gamote/lottie-react/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Gamote/lottie-react?targetFile=package.json) [![Coverage Status](https://coveralls.io/repos/github/Gamote/lottie-react/badge.svg?branch=master)](https://coveralls.io/github/Gamote/lottie-react?branch=master) [![Tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Gamote/lottie-react/blob/master/LICENSE)
+
+**Note** this project is a fork of https://github.com/Gamote/lottie-react and uses lottie-web light (which does not support action script animations). Additionally prop-types have been removed and some cleanup is done in regards of the typings. Functionality is exactly the same.
 
 This project is meant to give developers full control over **[Lottie](https://airbnb.design/lottie/)** instance with minimal implementation by wrapping **[lottie-web](https://github.com/airbnb/lottie-web)** in a Component or Hook that can be easily used in **React** applications.
 
 ## Installation
 
-Install **react**, **react-dom** and **prop-types** if you don’t have them already:
+Install **react**, **react-dom** if you don’t have them already:
 
 _**Note:** This library is using React hooks so the minimum version required for both react and react-dom is 16.8.0._
-
-```text
-npm i react@^16.8.0 react-dom@^16.8.0 prop-types@^15.5.7
-```
 
 Install **lottie-react** using npm:
 
 ```text
-npm i lottie-react
+yarn add @novemberfiveco/lottie-react-light
 ```
 
 ## Usage
@@ -25,7 +23,7 @@ npm i lottie-react
 ### Component
 
 ```js
-import Lottie from "lottie-react";
+import Lottie from "@novemberfiveco/lottie-react-light";
 import groovyWalkAnimation from "./groovyWalk.json";
 
 const Example = () => {
@@ -35,12 +33,10 @@ const Example = () => {
 export default Example;
 ```
 
-[Try it on CodeSandbox](https://codesandbox.io/s/lottie-react-component-2k13t)
-
 ### Hook
 
 ```js
-import { useLottie } from "lottie-react";
+import { useLottie } from "@novemberfiveco/lottie-react-light";
 import groovyWalkAnimation from "./groovyWalk.json";
 
 const Example = () => {
@@ -57,8 +53,6 @@ const Example = () => {
 
 export default Example;
 ```
-
-[Try it on CodeSandbox](https://codesandbox.io/s/lottie-react-hook-13nio)
 
 ## Documentation
 
