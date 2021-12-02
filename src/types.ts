@@ -1,18 +1,17 @@
-import React, {
+import type {
+  HTMLProps,
   MutableRefObject,
   AnimationEventHandler,
   ReactElement,
 } from "react";
-import {
+
+import type {
   AnimationConfigWithData,
   AnimationDirection,
   AnimationEventName,
   AnimationItem,
   AnimationSegment,
-  CanvasRendererConfig,
-  HTMLRendererConfig,
-  SVGRendererConfig,
-} from "lottie-web";
+} from 'lottie-web/build/player/lottie_light';
 
 export type LottieRefCurrentProps = {
   play: () => void;
@@ -47,15 +46,16 @@ export type LottieOptions = AnimationConfigWithData & {
   onLoadedImages?: AnimationEventHandler | null;
   onDOMLoaded?: AnimationEventHandler | null;
   onDestroy?: AnimationEventHandler | null;
-} & React.HTMLProps<HTMLDivElement>;
+} & HTMLProps<HTMLDivElement>;
 
 export type PartialLottieOptions = Omit<LottieOptions, "animationData"> & {
   animationData?: LottieOptions["animationData"];
 };
 
 export type LottieComponentProps = LottieOptions &
-  React.HTMLProps<HTMLDivElement> & {
+  HTMLProps<HTMLDivElement> & {
     interactivity?: Omit<InteractivityProps, "lottieObj">;
+    container?: Element;
   };
 
 export type PartialLottieComponentProps = Omit<
