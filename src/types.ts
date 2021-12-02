@@ -52,7 +52,7 @@ export type PartialLottieOptions = Omit<LottieOptions, "animationData"> & {
   animationData?: LottieOptions["animationData"];
 };
 
-export type LottieComponentProps = LottieOptions &
+export type LottieComponentProps = Omit<LottieOptions, 'container'> &
   HTMLProps<HTMLDivElement> & {
     interactivity?: Omit<InteractivityProps, "lottieObj">;
     container?: Element;
