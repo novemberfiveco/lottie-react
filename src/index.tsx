@@ -1,14 +1,8 @@
-import LottiePlayer from "lottie-web/build/player/lottie_light";
-
 import Lottie from "./components/Lottie";
 import useLottie from "./hooks/useLottie";
 import useLottieInteractivity from "./hooks/useLottieInteractivity";
 
-// TODO: For backward compatibility, remove on v2
-export const Animator: typeof Lottie = Lottie;
-export const useAnimator: typeof useLottie = useLottie;
-
-export { LottiePlayer, useLottie, useLottieInteractivity };
+export { Lottie, useLottie, useLottieInteractivity };
 
 export default Lottie;
 export * from "./types";
