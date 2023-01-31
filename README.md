@@ -1,6 +1,6 @@
 # lottie-react-light
 
-[![npm version](https://img.shields.io/npm/v/lottie-react)](https://www.npmjs.com/package/lottie-react) [![npm downloads/month](https://img.shields.io/npm/dm/lottie-react)](https://www.npmjs.com/package/lottie-react) [![Build Status](https://travis-ci.org/Gamote/lottie-react.svg?branch=master)](https://travis-ci.org/Gamote/lottie-react) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/13a28cb016c941daa9084654bc2bac75)](https://www.codacy.com/manual/Gamote/lottie-react) [![Known Vulnerabilities](https://snyk.io/test/github/Gamote/lottie-react/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Gamote/lottie-react?targetFile=package.json) [![Coverage Status](https://coveralls.io/repos/github/Gamote/lottie-react/badge.svg?branch=master)](https://coveralls.io/github/Gamote/lottie-react?branch=master) [![Tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Gamote/lottie-react/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/lottie-react)](https://www.npmjs.com/package/lottie-react) [![npm downloads/month](https://img.shields.io/npm/dm/lottie-react)](https://www.npmjs.com/package/lottie-react) [![Known Vulnerabilities](https://snyk.io/test/github/Gamote/lottie-react/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Gamote/lottie-react?targetFile=package.json) [![Coverage Status](https://coveralls.io/repos/github/Gamote/lottie-react/badge.svg?branch=master)](https://coveralls.io/github/Gamote/lottie-react?branch=master) [![Tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Gamote/lottie-react/blob/master/LICENSE)
 
 **Note** this project is a fork of https://github.com/Gamote/lottie-react and uses lottie-web light (which does not support action script animations). Additionally prop-types have been removed and some cleanup is done in regards of the typings. Functionality is exactly the same.
 
@@ -8,29 +8,27 @@ This project is meant to give developers full control over **[Lottie](https://ai
 
 ## Installation
 
-Install **react**, **react-dom** if you don’t have them already:
+1. Make sure you have the peer-dependencies installed: `react` and `react-dom`.
 
-_**Note:** This library is using React hooks so the minimum version required for both react and react-dom is 16.8.0._
+    > _**Note:** This library is using React Hooks so the **minimum** version required for both **react** and **react-dom** is **v16.8.0**._
 
 Install **lottie-react** using npm:
 
 ```text
-yarn add @novemberfiveco/lottie-react-light
+npm i @novemberfiveco/lottie-react-light
 ```
 
 ## Usage
 
-### Component
+### Using the component ([try it](https://codesandbox.io/s/lottie-react-component-2k13t))
 
 ```js
 import Lottie from "@novemberfiveco/lottie-react-light";
 import groovyWalkAnimation from "./groovyWalk.json";
 
-const Example = () => {
-  return <Lottie animationData={groovyWalkAnimation} />;
-};
+const App = () => <Lottie animationData={groovyWalkAnimation} loop={true} />;
 
-export default Example;
+export default App;
 ```
 
 ### Hook
@@ -39,29 +37,25 @@ export default Example;
 import { useLottie } from "@novemberfiveco/lottie-react-light";
 import groovyWalkAnimation from "./groovyWalk.json";
 
-const Example = () => {
+const App = () => {
   const options = {
     animationData: groovyWalkAnimation,
-    loop: true,
-    autoplay: true,
+    loop: true
   };
 
   const { View } = useLottie(options);
 
-  return View;
+  return <>{View}</>;
 };
 
-export default Example;
+export default App;
 ```
 
 ## Documentation
 
-Checkout the [Documentation](https://gamote.github.io/lottie-react) for more information and examples.
+## Tests
 
-## Test
-```text
-npm test
-```
+Run the tests using the `yarn test` command.
 
 ### Coverage report
 ```text
@@ -79,18 +73,22 @@ All files                    |     100 |      100 |     100 |     100 |
 
 ## Contribution
 
-Let us know if you have any suggestions or contributions. This package has the mission to help developers, so if you have any features that you think we should prioritize, reach out to us.
+Any **questions** or **suggestions**? Use the [**Discussions**](https://github.com/Gamote/lottie-react/discussions) tab. Any **issues**? Don't hesitate to document it in the [**Issues**](https://github.com/Gamote/lottie-react/issues) tab, and we will do our best to investigate it and fix it. Any **solutions**? You are very welcomed to open a [**pull request**](https://github.com/Gamote/lottie-react/pulls).
+
+> 👩‍💻 `v3` is under development and is planning to bring a lot of features and improvements. But unfortunately, at the moment all the maintainers are super busy with work related projects. You can check out the progress under the `v3` branch. And of course, you are encouraged to contribute. :)
+
+Thank you for investing your time in contributing to our project! ✨
 
 ## Projects to check out
 
-- [lottie-web](https://github.com/airbnb/lottie-web) - Lottie implementation for Web. Our project is based on it and you should check it because it will help you understand what's behind this package and it will give you a better understanding on what features should you expect to have in the future.
+- [lottie-web](https://github.com/airbnb/lottie-web) - Lottie implementation for Web. Our project is based on it, and you might want to check it out in order to have a better understanding on what's behind this package or what features could you expect to have in the future.
 - [lottie-android](https://github.com/airbnb/lottie-android) - Lottie implementation for Android
 - [lottie-ios](https://github.com/airbnb/lottie-ios) - Lottie implementation for iOS
 - [lottie-react-native](https://github.com/react-native-community/lottie-react-native) - Lottie implementation for React Native
-- [LottieFiles](https://lottiefiles.com/) - Are you looking for animations? LottieFiles is the way to go!
+- [LottieFiles](https://lottiefiles.com/) - Are you looking for animations files? LottieFiles has a lot of them!
 
 ## License
 
-**lottie-react** is available under the [MIT license](https://github.com/Gamote/lottie-react/blob/master/LICENSE).
+**lottie-react** is available under the [MIT license](https://github.com/Gamote/lottie-react/blob/main/LICENSE).
 
 Thanks to [David Probst Jr](https://lottiefiles.com/davidprobstjr) for the animations used in the examples.
