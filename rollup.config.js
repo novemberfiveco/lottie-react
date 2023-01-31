@@ -129,7 +129,7 @@ const exports = {
     plugins: [...reusablePluginList, terser()],
   },
   dts: {
-    input: './compiled/index.d.ts',
+    input: "./compiled/index.d.ts",
     output: {
       file: packageJSON.types,
       format: "es",
