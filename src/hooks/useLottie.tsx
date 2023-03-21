@@ -1,9 +1,11 @@
-import {
+import type {
   AnimationConfigWithData,
   AnimationItem,
   AnimationDirection,
   AnimationSegment,
+  RendererType,
 } from "lottie-web";
+import lottieLight from "lottie-web/build/player/lottie_light";
 import React, {
   CSSProperties,
   useEffect,
@@ -11,8 +13,6 @@ import React, {
   ReactElement,
   useState,
 } from "react";
-import lottieLight from "lottie-web/build/player/lottie_light";
-
 import {
   Listener,
   LottieOptions,
@@ -20,8 +20,8 @@ import {
   PartialListener,
 } from "../types";
 
-const useLottie = (
-  props: LottieOptions,
+const useLottie = <T extends RendererType = "svg">(
+  props: LottieOptions<T>,
   style?: CSSProperties,
 ): { View: ReactElement } & LottieRefCurrentProps => {
   const {
@@ -175,7 +175,7 @@ const useLottie = (
     animationInstanceRef.current?.destroy();
 
     // Build the animation configuration
-    const config: AnimationConfigWithData = {
+    const config: AnimationConfigWithData<T> = {
       ...props,
       ...forcedConfigs,
       container: animationContainer.current,
