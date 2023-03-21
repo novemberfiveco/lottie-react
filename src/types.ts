@@ -4,6 +4,7 @@ import type {
   AnimationEventName,
   AnimationItem,
   AnimationSegment,
+  RendererType,
 } from "lottie-web/build/player/lottie_light";
 import {
   MutableRefObject,
@@ -34,8 +35,8 @@ export type LottieRefCurrentProps = {
 
 export type LottieRef = MutableRefObject<LottieRefCurrentProps | null>;
 
-export type LottieOptions = Omit<
-  AnimationConfigWithData,
+export type LottieOptions<T extends RendererType = "svg"> = Omit<
+  AnimationConfigWithData<T>,
   "container" | "animationData"
 > & {
   animationData: unknown;
